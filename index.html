@@ -126,10 +126,6 @@
         .card {
             position: relative;
             border-radius: 0.75rem;
-            transition: transform 0.3s ease-out;
-        }
-        .card:hover {
-            transform: translateY(-2px);
         }
         .card::before {
             content: "";
@@ -147,10 +143,6 @@
             -webkit-mask-composite: xor;
             mask-composite: exclude;
             pointer-events: none;
-            transition: background 0.3s ease-out;
-        }
-        .card:hover::before {
-            background: linear-gradient(45deg, #52525b, transparent, #52525b);
         }
         .input-focus-effect {
             position: relative;
@@ -208,12 +200,6 @@
                 0 4px 12px rgba(0, 0, 0, 0.1),
                 0 2px 4px rgba(0, 0, 0, 0.1),
                 inset 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .input-focus-effect:hover input {
-            background: linear-gradient(180deg, rgba(24, 24, 27, 0.85), rgba(24, 24, 27, 0.9));
-        }
-        .input-focus-effect:hover::after {
-            background: linear-gradient(45deg, transparent, rgba(52, 211, 153, 0.15), transparent);
         }
         .button-hover-effect {
             position: relative;
@@ -344,7 +330,7 @@
                                                 </div>
                                                 <div class="flex-1">
                                                     <p class="text-zinc-300 text-sm md:text-base leading-relaxed mt-1.5">
-                                                        Moyashi URL Shortener APIを使用すると長いURLを扱いやすい短いリンクに変換できます。
+                                                        Moyashi URL Shortener APIを使用すると長いURLを扱いやすいいリンクに変換できます。
                                                     </p>
                                                 </div>
                                             </div>
@@ -642,7 +628,7 @@ response = requests.post(api_url,
             button.setAttribute('aria-expanded', content.classList.contains('accordion__content--open'));
         });
 
-        // URL短縮能の実装
+        // URL��縮能の実装
         document.getElementById('shortenButton').addEventListener('click', async function() {
             const originalUrl = document.getElementById('originalUrl').value;
             const resultDiv = document.getElementById('result');
